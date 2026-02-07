@@ -8,7 +8,7 @@ int main()
  InitWindow(300,600,"Tertris");
  SetTargetFPS (60);
 
- Color darkblue = {44, 44, 127,255};
+ Color green = {144, 238, 144,255};
  grid.grid[0][2] = 6;
  
  grid.Print();
@@ -17,7 +17,7 @@ int main()
  while (WindowShouldClose() == false){
 
     BeginDrawing();
-    ClearBackground (darkblue);
+    ClearBackground (green);
      grid.draw();
     
     EndDrawing();
