@@ -8,5 +8,5 @@ Block::Block (){
     
 }
 void draw(){
-    // std::vector<Position>tiles = cells[];
+    // std::vector<Position>tiles = cells[rotationState];
 }
