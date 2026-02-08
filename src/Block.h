@@ -2,18 +2,24 @@
 #include <vector>
 #include <map>
 #include "position.h"
-#include "Color.h"
+#include "colors.h"
 
 class Block
 {
 public:
-Block();
-int id;
-std::map<int , std::vector<Position>>cells ;
-
+    Block();
+    void Draw(int offsetX, int offsetY);
+    void Move(int rows, int columns);
+    std::vector<Position> GetCellPositions();
+    void Rotate();
+    void UndoRotation();
+    int id;
+    std::map<int, std::vector<Position>> cells;
 
 private:
- int cellsize;
- int rotationState;
- std::vector<Color>Colors;
+    int cellSize;
+    int rotationState;
+    std::vector<Color> colors;
+    int rowOffset;
+    int columnOffset;
 };
